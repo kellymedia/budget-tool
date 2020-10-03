@@ -4,25 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#317EFB">
-  <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
-
+  <meta name="theme-color" content="#406325">
+  <link rel="shortcut icon" href="icons/money-icon-192x192.png" type="image/x-icon">
+  <!-- <a href='https://www.freepik.com/vectors/business'>Business vector created by freepik - www.freepik.com</a> -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;1,200;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
 
-  <title>Budget Tracker</title>
+  <title>Budget Tool</title>
 </head>
 <body>
   <div class="wrapper">
-    <div class="total">
-      <div class="total">Your total is: $<span id="total">0</span></div>
+    <div class="jumbotron">
+      <h4>Account Balance:</h4>
+      <h1>$<span id="total">0</span></h1>
     </div>
 
     <div class="form">
-      <input type="text" id="t-name" placeholder="Name of transaction" />
-      <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-      <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-      <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
+      <div class="form-fields">
+        <input type="text" id="t-name" class="form-control" placeholder="Name of transaction" />
+        <input type="number" min="0" id="t-amount" class="form-control" placeholder="Transaction amount" />
+      </div>
+      <div class="form-btns">
+        <button id="add-btn" class="btn btn-primary"><i class="fa fa-plus-square-o buttons"></i> Add Funds</button>
+        <button id="sub-btn" class="btn btn-secondary"><i class="fa fa-minus-square-o"></i> Subtract Funds</button>
+      </div>
       <p class="error"></p>
     </div>
 
@@ -42,6 +49,16 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src="index.js"></script>
+  <script src="./index.js"></script>
+  <script src="./db.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js').then(reg => {
+          console.log('We found your service worker file!', reg);
+        });
+      });
+    }
+  </script>
 </body>
 </html>
