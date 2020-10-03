@@ -83,6 +83,20 @@ tr:nth-child(even) {
   cursor: pointer;
 }
 
+.btn-primary:active {
+  color:  #D99A32 !important;
+  background-color: #FCCA0D !important;
+  border-color: #FCCA0D !important;
+  cursor: pointer;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  color:  #D99A32 !important;
+  background-color: #FCCA0D !important;
+  border-color: #FCCA0D !important;
+  cursor: pointer;
+}
+
 .btn-secondary {
   background-color:#F0F0F0;
   border-color: #F0F0F0;
