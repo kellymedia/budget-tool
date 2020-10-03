@@ -1,11 +1,11 @@
 body {
   font-size: 120%;
-  font-family: Arial;
+  font-family: 'Raleway', sans-serif;
 }
 
 button, input {
   font-size: 100%;
-  font-family: Arial;
+  font-family: 'Raleway', sans-serif;
 }
 
 table {
@@ -23,7 +23,7 @@ tr:nth-child(even) {
 }
 
 .error {
-  color: red;
+  color: #B03039;
 }
 
 .wrapper {
@@ -42,10 +42,66 @@ tr:nth-child(even) {
   width: 100%;
 }
 
+.form-control {
+  margin-top: 10px;
+}
+
+.form-input:focus, .btn:active {
+  outline: #DEF2EC;
+  border-color:#DEF2EC;
+  box-shadow: none;
+}
+
 .transactions {
   text-align: left;
   max-height: 300px;
   overflow: auto;
   width: 90%;
   margin: 0 auto;
+}
+
+.btn {
+  margin: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-primary {
+  background-color:#406325;
+  padding-left: 30px;
+  padding-right: 30px;
+  border:none;
+  box-shadow: none; /* Removes blue halo */
+}
+
+.btn-primary:hover {
+  color:  #D99A32;
+  background-color: #FCCA0D;
+  border-color: #FCCA0D;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color:#F0F0F0;
+  border-color: #F0F0F0;
+  color: #868686;
+}
+
+.btn-secondary:hover {
+  color: white;
+  background-color: #B03039;
+  border-color: #B03039;
+  cursor: pointer;
+}
+
+.jumbotron {
+  background-color: #DEF2EC;
+  padding: 35px;
+  margin-top: 30px;
+}
+
+h1 {
+  color: #406325;
 }
